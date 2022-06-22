@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(asset/bglogin.jpg);
+}
+
+.login {
+  width: 360px;
+  background: rgba(0, 0, 0, 0.493);
+  height: 580px;
+  padding: 80px 40px;
+  border: 4px solid #1a1a1a;
+  border-image: linear-gradient(60deg, #000000, #7d817e, #ffffff);
+  border-image-slice: 1;
+  border-radius: 10px;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.front {
+  color: #000000;
+}
+
+.back {
+  color: #ffffff;
+}
+
+.form {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.form input {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.form span::before {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #ffffff;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.form span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg, #000000, #444444, #777777, #bbbbbb);
+  transition: ease 0.5s;
+}
+
+.focus + span::before {
+  top: -3px;
+  font-size: 13px;
+  color: #dbdbdb;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.focus + span::after {
+  width: 100%;
+}
+
+button {
+  color: #000000;
+  position: absolute;
+  width: 60%;
+  font-size: 20px;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px 32px;
+  background-color: transparent;
+  border: 2px solid #adadad;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.6s ease-out, box-shadow 0.3s ease 0.2s;
+}
+
+button , button a{
+  color: #000000;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c6300;
+  clip-path: circle(0 at 0% 100%);
+  transition: clip-path 0.5s ease;
+  z-index: -1;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c6300;
+  clip-path: circle(0 at 100% 0%);
+  transition: clip-path 0.5s ease;
+  z-index: -1;
+}
+
+button:hover {
+  border: none;
+  color: #000000;
+}
+
+button:hover::before {
+  clip-path: circle(150px at 0% 100%);
+}
+
+button:hover::after {
+  clip-path: circle(150px at 100% 0%);
+}
+
+.btn_register{
+  position: absolute;
+  top: 80%;
+}
+
+.logo{
+  position: absolute;
+  left: 50%;
+  top: 9%;
+}
